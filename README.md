@@ -8,12 +8,6 @@ This repo contain backend for SPA app.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
-At first you need to install NodeJS and Yarn
-
-You can find more info on https://nodejs.org/en/ and https://yarnpkg.com/lang/en/
-
 ### Installing
 
 Require is full LAMP server with PHP 7.1 in minimum and installed composer. When you clone repository you need to run: 

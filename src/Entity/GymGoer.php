@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Class GymGoer
+
+ * @ORM\Entity()
+ */
+class GymGoer
+{
+    /**
+     * @var int
+     *
+     * @ORM\Id()
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\Length(min="3", max="50")
+     */
+    protected $name;
+}

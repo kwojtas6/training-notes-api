@@ -1,5 +1,11 @@
 # Traning notes - api
 
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg)](https://php.net)
+[![GitHub license](https://img.shields.io/github/license/kwojtas6/training-notes-api.svg)](https://github.com/kwojtas6/training-notes-api/blob/master/LICENSE.md)
+[![Build Status](https://travis-ci.org/https://travis-ci.org/kwojtas6/training-notes-api.svg?branch=master)](https://travis-ci.org/https://travis-ci.org/kwojtas6/training-notes-api)
+[![Code Coverage](https://scrutinizer-ci.com/g/kwojtas6/training-notes-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kwojtas6/training-notes-api/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kwojtas6/training-notes-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kwojtas6/training-notes-api/?branch=master)
+
 When you need to control your training progress this app it's all you need. You can define exercises and monitor progress of your training.
 
 This repo contain backend for SPA app.

@@ -56,4 +56,10 @@ class ExerciseInTraining
      * @ORM\OneToMany(targetEntity="App\Entity\Entry", mappedBy="exerciseInTraining")
      */
     protected $entries;
+
+    public function __construct(Exercise $exercise, Training $training)
+    {
+        $this->exercise = $exercise;
+        $this->training = $training;
+    }
 }

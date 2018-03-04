@@ -25,4 +25,14 @@ class Exercise
      * @Assert\Length(min="3", max="50")
      */
     protected $name;
+
+    public function __construct(string $name)
+    {
+        $this->name = $name;
+    }
+
+    public function name(): string
+    {
+        return $this->name;
+    }
 }

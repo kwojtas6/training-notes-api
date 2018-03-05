@@ -28,4 +28,4 @@ install:
     - ./vendor/bin/simple-phpunit install
 
 script:
-    - ./bin/phpunit --no-coverage
+    - ./bin/phpunit

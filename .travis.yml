@@ -18,6 +18,7 @@ matrix:
         - php: nightly
 
 before_install:
+    - chmod +x ./bin/phpunit
     - phpenv config-rm xdebug.ini
     - yes '' | pecl install -f apcu-5.1.8
     - composer self-update

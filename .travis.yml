@@ -6,24 +6,28 @@ notifications:
 
 cache:
     directories:
-        - $HOME/.composer/cache
+        - $HOME/.composer/cache/files
+        - $HOME/symfony-bridge/.phpunit
 
 matrix:
-    include:
+    fast_finish: true
+      include:
+        - php: 7.1
         - php: 7.2
-          env:
-              - SYMFONY_VERSION=4.0.*
-        - php: 7.2
-        - php: hhvm
         - php: nightly
-    allow_failures:
-        - php: hhvm
+      allow_failures:
         - php: nightly
 
 before_install:
+    - phpenv config-rm xdebug.ini
+    - yes '' | pecl install -f apcu-5.1.8
     - composer self-update
-    - if [[ ! $SYMFONY_VERSION ]]; then composer update; fi;
-    - if [[ $SYMFONY_VERSION ]]; then composer require symfony/symfony:${SYMFONY_VERSION} -n; fi;
+
+install:
+  - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
+  - bin/simple-phpunit install
 
 script:
+    - composer lint
+    - composer cs
     - ./bin/phpunit --no-coverage

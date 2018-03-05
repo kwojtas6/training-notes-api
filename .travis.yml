@@ -27,6 +27,4 @@ install:
     - ./vendor/bin/simple-phpunit install
 
 script:
-    - composer lint
-    - composer cs
     - ./bin/phpunit --no-coverage

@@ -24,7 +24,7 @@ before_install:
 
 install:
     - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
-    - bin/simple-phpunit install
+    - ./vendor/bin/simple-phpunit install
 
 script:
     - composer lint

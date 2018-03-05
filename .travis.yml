@@ -11,11 +11,10 @@ cache:
 
 matrix:
     fast_finish: true
-      include:
-        - php: 7.1
+    include:
         - php: 7.2
         - php: nightly
-      allow_failures:
+    allow_failures:
         - php: nightly
 
 before_install:
@@ -24,8 +23,8 @@ before_install:
     - composer self-update
 
 install:
-  - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
-  - bin/simple-phpunit install
+    - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
+    - bin/simple-phpunit install
 
 script:
     - composer lint

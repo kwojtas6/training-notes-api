@@ -30,6 +30,9 @@ install:
     - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
     - ./vendor/bin/simple-phpunit install
 
+after_install:
+    - chmod +x ./bin/console
+
 script:
     - ./vendor/bin/simple-phpunit
     # this checks that the source code follows the Symfony Code Syntax rules

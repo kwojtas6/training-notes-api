@@ -30,7 +30,7 @@ install:
     - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
     - ./vendor/bin/simple-phpunit install
 
-after_install:
+before_script:
     - chmod +x ./bin/console
 
 script:

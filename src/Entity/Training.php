@@ -44,7 +44,7 @@ class Training
     /**
      * @var Collection
      *
-     * @ORM\OneToMany(targetEntity=App\Entity\ExerciseInTraining", mappedBy="training")
+     * @ORM\OneToMany(targetEntity="App\Entity\ExerciseInTraining", mappedBy="training")
      */
     protected $exercises;
 

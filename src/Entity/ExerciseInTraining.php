@@ -36,7 +36,7 @@ class ExerciseInTraining
     /**
      * @var Training
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Training")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Training", inversedBy="exercises")
      * @ORM\JoinColumn(referencedColumnName="id")
      * @Assert\NotNull()
      */

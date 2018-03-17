@@ -51,5 +51,5 @@ script:
     # this checks that Doctrine's mapping configurations are valid
     - ./bin/console doctrine:schema:validate --skip-sync -vvv --no-interaction
     - vendor/bin/phpcs --report-full --standard=PSR2 src tests
-    - vendor/bin/phpstan analyse --level=4 src -c tests/phpstan.neon
+    - vendor/bin/phpstan analyse --level=4 src
     - vendor/bin/phpcpd src tests

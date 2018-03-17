@@ -100,5 +100,4 @@ class TrainingTest extends TestCase
     {
         return $this->prophesize(Exercise::class)->reveal();
     }
-
 }

@@ -27,8 +27,9 @@ before_install:
     - composer self-update
 
 install:
-    - composer install --prefer-dist --no-suggest --classmap-authoritative --no-interaction
+    - composer install --dev --prefer-dist --no-suggest --classmap-authoritative --no-interaction
     - ./vendor/bin/simple-phpunit install
+    - ./bin/phpunit
 
 before_script:
     - chmod +x ./bin/console

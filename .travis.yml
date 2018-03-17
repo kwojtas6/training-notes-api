@@ -35,7 +35,7 @@ before_script:
     - chmod +x ./bin/phpunit
 
 script:
-    - ./bin/phpunit  --no-coverage
+    - ./bin/phpunit -c
     # this checks that the source code follows the Symfony Code Syntax rules
     #- '[[ "$TRAVIS_PHP_VERSION" == "nightly" ]] || ./vendor/bin/php-cs-fixer fix --diff --dry-run -v'
     # this checks that the YAML config files contain no syntax errors
@@ -50,3 +50,6 @@ script:
     - composer validate
     # this checks that Doctrine's mapping configurations are valid
     - ./bin/console doctrine:schema:validate --skip-sync -vvv --no-interaction
+    - vendor/bin/phpcs --report-full --standard=PSR2 src tests
+    - vendor/bin/phpstan analyse --level=4 src -c tests/phpstan.neon
+    - vendor/bin/phpcpd src tests

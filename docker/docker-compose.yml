@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  web:
+    image: "php:tna"
+    container_name: web_php
+    build:
+      context: ../
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - ../:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+  db:
+    image: mysql:5
+    container_name: web_db
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password

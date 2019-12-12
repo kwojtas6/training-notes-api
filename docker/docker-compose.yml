@@ -10,11 +10,11 @@ services:
     volumes:
       - ../:/var/www/html
     ports:
-      - 8080:80
+      - 8082:80
     depends_on:
       - db
   db:
-    image: mysql:5
+    image: mysql:latest
     container_name: web_db
     volumes:
       - ./data:/var/lib/mysql

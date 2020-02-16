@@ -13,6 +13,12 @@ services:
       - 8082:80
     depends_on:
       - db
+    environment:
+      APP_ENV: dev
+      APP_SECRET: 4c5e0672a2db7cb403fd1022ef044a7a
+      PHP_XDEBUG_ENABLED: 1 # Set 1 to enable.
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000
+      PHP_IDE_CONFIG: serverName=127.0.0.1
   db:
     image: mysql:latest
     container_name: web_db
